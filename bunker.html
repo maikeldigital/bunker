@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Búnker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --accent: #facc15;
+      --dark-bg: #0f172a;
+      --light-bg: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text);
+      line-height:1.6;
+    }
+    .banner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 60vh;
+    }
+    .banner-text {
+      position: absolute;
+      top: 50%; left:50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+    .banner-text h1 {
+      font-size: 3rem;
+      margin-bottom:0.5rem;
+      color: var(--accent);
+    }
+    .banner-text p {
+      font-size:1.2rem;
+      max-width:800px;
+      margin:auto;
+    }
+    .section {
+      max-width:1200px;
+      margin:2rem auto;
+      padding:0 1rem;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:2rem;
+    }
+    .card {
+      background: var(--light-bg);
+      border-radius:12px;
+      padding:2rem;
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
+      transition:transform .3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h2 {
+      font-size:1.5rem;
+      color: var(--accent);
+      margin-bottom:1rem;
+      display:flex; align-items:center; gap:0.5rem;
+    }
+    .card h2 i { color:var(--accent); }
+    .card p, .card ul { color: var(--text); }
+    .card ul { padding-left:1.2rem; }
+    .card img { width:100%; border-radius:8px; margin-top:1rem; }
+    .stats {
+      display:flex;
+      justify-content:space-around;
+      flex-wrap:wrap;
+      gap:1rem;
+      padding:2rem;
+      background:var(--light-bg);
+      margin:2rem auto;
+      border-radius:12px;
+      max-width:1000px;
+    }
+    .stat { text-align:center; }
+    .stat h3 { font-size:1.8rem; color:var(--accent); }
+    .stat p { color:var(--muted); }
+    footer {
+      text-align:center;
+      padding:2rem;
+      font-size:0.9rem;
+      color:var(--muted);
+      border-top:1px solid #334155;
+      margin-top:2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1562007901-70138a4a07b6?auto=format&fit=crop&w=1470&q=80" alt="Vista de la Tierra desde el espacio">
+    <div class="banner-text">
+      <h1>INVERSIÓN EN BÚNKERS INTELIGENTES</h1>
+      <p>Seguridad, rentabilidad y futuro en una sola estructura.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="grid">
+      <div class="card">
+        <h2><i class="fas fa-exclamation-triangle"></i> PROBLEMA</h2>
+        <p>El mundo está cambiando, la incertidumbre aumenta.</p>
+        <ul>
+          <li>Riesgos climáticos y pandemias</li>
+          <li>Mayor necesidad de refugios seguros</li>
+          <li>Oferta insuficiente para el ciudadano medio</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-chart-line"></i> OPORTUNIDAD</h2>
+        <p>Mercado emergente con alto potencial en España.</p>
+        <ul>
+          <li>Valor estimado: 27 000 millones € en 2028</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1600093463592-a9b91ae984a0?auto=format&fit=crop&w=1470&q=80" alt="Mercado emergente">
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-home"></i> CASA-BÚNKER</h2>
+        <p>Refugios accesibles, rápidos de instalar:</p>
+        <ul>
+          <li>Hormigón proyectado</li>
+          <li>Sistemas de ventilación HEPA</li>
+          <li>Confort interior premium</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1614332193680-8c5d81907be8?auto=format&fit=crop&w=1470&q=80" alt="Casa Bunker">
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-euro-sign"></i> INVERSIÓN</h2>
+        <p>Aportas capital, nosotros ejecutamos:</p>
+        <ul>
+          <li>Coste total: 30 000 €</li>
+          <li>Membresía: 40 €/mes</li>
+          <li>Ocupación media: 70%</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1581090700227-1e8e2fe95d66?auto=format&fit=crop&w=1470&q=80" alt="Finanzas">
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-check-circle"></i> VALIDACIÓN</h2>
+        <p>Proceso disruptivo con prototipos reales:</p>
+        <ul>
+          <li>Pruebas técnicas exitosas</li>
+          <li>Durabilidad garantizada</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1622445272468-3eb034ba08fa?auto=format&fit=crop&w=1470&q=80" alt="Validación">
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-arrow-right"></i> PRÓXIMOS PASOS</h2>
+        <ul>
+          <li>Registro online</li>
+          <li>Simulador de acceso</li>
+          <li>Primera ronda de inversión</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1613475431735-52ea6ae3005d?auto=format&fit=crop&w=1470&q=80" alt="Pasos futuros">
+      </div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <h3>160 €/mes</h3>
+      <p>Ingresos por 4 plazas</p>
+    </div>
+    <div class="stat">
+      <h3>1.920 €/año</h3>
+      <p>Rentabilidad anual</p>
+    </div>
+    <div class="stat">
+      <h3>+41.000 €</h3>
+      <p>Beneficio neto estimado</p>
+    </div>
+  </div>
+  <footer>
+    © 2025 Proyecto Búnker | Todos los derechos reservados
+  </footer>
+</body>
+</html>
